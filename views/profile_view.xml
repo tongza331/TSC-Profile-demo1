@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="tscprofile_list_view" model="ir.ui.view">
+        <field name="name">tscprofile.list.view</field>
+        <field name="model">tsc.profile</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="position"/>
+                <field name="organization"/>
+                <field name="email"/>
+                <field name="date_join"/>
+                <field name="img" widget="image" class="oe_avatar"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="tsc_profile_form_view" model="ir.ui.view">
+        <field name="name">tsc_profile.form.view</field>
+        <field name="model">tsc.profile</field>
+        <field name="arch" type="xml">
+            <form string="TSCProfile">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="position"/>
+                        <field name="organization"/>
+                        <field name="email"/>
+                        <field name="date_join"/>
+                        <field name="img" widget="image" class="oe_avatar"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_tsc_profile" model="ir.actions.act_window">
+        <field name="name">TSC Profile</field>
+        <field name="res_model">tsc.profile</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="tsc_profile_root_menu" name="TSC Profile"/>
+    <menuitem id="tsc_profile_sub_menu" parent="tsc_profile_root_menu"/>
+    <menuitem id="tsc_profile_menu" action="action_tsc_profile" parent="tsc_profile_sub_menu"/>
+</odoo>

@@ -1,0 +1,44 @@
+<odoo>
+    <data>
+        <template id="namelist">
+            <t t-call="website.layout">
+                <t t-set="title">Our Team</t>
+                <div class="oe_structure">
+                    <div class="container">
+                        <center><h1>Our Team</h1></center>
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <td>
+                                        <h5>Name</h5>
+                                    </td>
+                                    <td>
+                                        <h5>Position</h5>
+                                    </td>
+                                    <td>
+                                        <h5>Image</h5>
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="team" t-as="team">
+                                    <tr>
+                                        <td>
+                                            <t t-esc="team.name"/>
+                                        </td>
+                                        <td>
+                                            <t t-esc="team.position"/>
+                                        </td>
+                                        <td>
+
+                                        </td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </t>
+        </template>
+    </data>
+</odoo>
