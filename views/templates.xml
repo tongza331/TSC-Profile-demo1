@@ -16,10 +16,14 @@
                                         <h5>Position</h5>
                                     </td>
                                     <td>
+                                        <h5>Organization</h5>
+                                    </td>
+                                    <td>
                                         <h5>Image</h5>
                                     </td>
                                 </tr>
                             </thead>
+                            
                             <tbody>
                                 <t t-foreach="team" t-as="team">
                                     <tr>
@@ -30,7 +34,10 @@
                                             <t t-esc="team.position"/>
                                         </td>
                                         <td>
-
+                                            <t t-esc="team.organization"/>
+                                        </td>
+                                        <td>
+                                            <center> <img t-att-src="image_data_uri(team.img)" style="max-height:85pt;max-width:90%"/> </center>
                                         </td>
                                     </tr>
                                 </t>
