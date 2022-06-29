@@ -5,44 +5,130 @@
                 <t t-set="title">Our Team</t>
                 <div class="oe_structure">
                     <div class="container">
-                        <center><h1>Our Team</h1></center>
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr>
-                                    <td>
-                                        <h5>Name</h5>
-                                    </td>
-                                    <td>
-                                        <h5>Position</h5>
-                                    </td>
-                                    <td>
-                                        <h5>Organization</h5>
-                                    </td>
-                                    <td>
-                                        <h5>Image</h5>
-                                    </td>
-                                </tr>
-                            </thead>
-                            
-                            <tbody>
-                                <t t-foreach="team" t-as="team">
-                                    <tr>
-                                        <td>
-                                            <t t-esc="team.name"/>
-                                        </td>
-                                        <td>
-                                            <t t-esc="team.position"/>
-                                        </td>
-                                        <td>
-                                            <t t-esc="team.organization"/>
-                                        </td>
-                                        <td>
-                                            <center> <img t-att-src="image_data_uri(team.img)" style="max-height:85pt;max-width:90%"/> </center>
-                                        </td>
-                                    </tr>
-                                </t>
-                            </tbody>
-                        </table>
+                        <section class="s_title pt40 o_colored_level pb16" data-vcss="001" data-snippet="s_title" data-name="Title" style="background-image: none;">
+                            <div class="s_allow_columns container">
+                                  <h1 style="text-align: center;">
+                                    <font style="font-size: 62px;">
+                                      <span style="font-size: 48px;">Our Team</span>
+                                    </font>
+                                    <br/>
+                                  </h1>
+                                  <div class="s_hr text-left pt0 pb0" data-snippet="s_hr" data-name="Separator">
+                                    <hr class="w-100 mx-auto" style="border-top-width: 1px; border-top-style: solid;"/>
+                                  </div>
+                            </div>
+                        </section>
+                        <section class="s_tabs pt48 pb48 o_colored_level" data-vcss="001" data-snippet="s_tabs" data-name="Tabs" style="background-image: none; padding-top : 0px !important;">
+                            <div class="container">
+                              <div class="s_tabs_main">
+                                <div class="s_tabs_nav mb-3">
+                                  <ul class="nav nav-pills justify-content-center" role="tablist">
+                                    <li class="nav-item">
+                                      <a class="nav-link" id="nav_tabs_link_1656473037572_73" data-toggle="tab" href="#nav_tabs_content_1656473037572_73" role="tab" aria-controls="nav_tabs_content_1656473037572_73" aria-selected="false">Leader</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link" id="nav_tabs_link_1656473037572_74" data-toggle="tab" href="#nav_tabs_content_1656473037572_74" role="tab" aria-controls="nav_tabs_content_1656473037572_74" aria-selected="false">Advisor</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link" id="nav_tabs_link_1656473037572_75" data-toggle="tab" href="#nav_tabs_content_1656473037572_75" role="tab" aria-controls="nav_tabs_content_1656473037572_75" aria-selected="true">Researcher</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link active" id="nav_tabs_link_1656473037572_76" data-toggle="tab" href="#nav_tabs_content_1656473037572_76" role="tab" aria-controls="nav_tabs_content_1656473037572_76" aria-selected="true">Engineer</a>
+                                    </li>
+                                  </ul>
+                                </div>
+                                <div class="s_tabs_content tab-content">
+                                  <div class="tab-pane fade" id="nav_tabs_content_1656473037572_73" role="tabpanel" aria-labelledby="nav_tabs_link_1656473037572_73">
+                                    <div class="oe_structure oe_empty">
+                                        <section class="s_features pt0 pb0" data-snippet="s_features" style="background-image: none;" data-name="Custom Features">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <t t-foreach="leader_team" t-as="leader_team">
+                                                        <div class="pb32 text-center o_colored_level col-lg-3 pt0" style="">
+                                                            <img t-att-src="image_data_uri(leader_team.img)" class="img-fluid  m-3 fa-3x bg-primary o_we_image_cropped mx-auto d-block rounded-circle shadow"
+                                                                 alt="" data-original-title="" title="" aria-describedby="tooltip646569" style="width: 100% !important;" loading="lazy"
+                                                                 data-mimetype="image/jpeg" data-x="98.13276231263379" data-y="37.299785867237716"
+                                                                 data-width="500" data-height="500" data-scale-x="1" data-scale-y="1" data-aspect-ratio="1/1"/>
+                                                            <h3>
+                                                                <span style="font-size: 24px;"><t t-esc="leader_team.name"/></span>
+                                                            </h3>
+                                                          <p><t t-esc="leader_team.position_detail"/></p>
+                                                        </div>
+                                                    </t>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                  </div>
+                                  <div class="tab-pane fade" id="nav_tabs_content_1656473037572_74" role="tabpanel" aria-labelledby="nav_tabs_link_1656473037572_74">
+                                    <div class="oe_structure oe_empty">
+                                      <section class="s_text_block" style="background-image: none;" data-name="Text">
+                                        <div class="container">
+                                            <div class="row">
+                                                <t t-foreach="advisor_team" t-as="advisor_team">
+                                                    <div class="pb32 text-center o_colored_level col-lg-3 pt0" style="">
+                                                        <img t-att-src="image_data_uri(advisor_team.img)" class="img-fluid  m-3 fa-3x bg-primary o_we_image_cropped mx-auto d-block rounded-circle shadow"
+                                                             alt="" data-original-title="" title="" aria-describedby="tooltip646569" style="width: 100% !important;" loading="lazy"
+                                                             data-mimetype="image/jpeg" data-x="98.13276231263379" data-y="37.299785867237716"
+                                                             data-width="500" data-height="500" data-scale-x="1" data-scale-y="1" data-aspect-ratio="1/1"/>
+                                                        <h3>
+                                                            <span style="font-size: 24px;"><t t-esc="advisor_team.name"/></span>
+                                                        </h3>
+                                                        <p><t t-esc="advisor_team.position_detail"/></p>
+                                                    </div>
+                                                </t>
+                                            </div>
+                                        </div>
+                                      </section>
+                                    </div>
+                                  </div>
+                                  <div class="tab-pane fade" id="nav_tabs_content_1656473037572_75" role="tabpanel" aria-labelledby="nav_tabs_link_1656473037572_75">
+                                    <div class="oe_structure oe_empty">
+                                      <section class="s_text_block" style="background-image: none;" data-name="Text">
+                                        <div class="container">
+                                            <div class="row">
+                                                <t t-foreach="researcher_team" t-as="researcher_team">
+                                                    <div class="pb32 text-center o_colored_level col-lg-3 pt0" style="">
+                                                        <img t-att-src="image_data_uri(researcher_team.img)" class="img-fluid  m-3 fa-3x bg-primary o_we_image_cropped mx-auto d-block rounded-circle shadow"
+                                                             alt="" data-original-title="" title="" aria-describedby="tooltip646569" style="width: 100% !important;" loading="lazy"
+                                                             data-mimetype="image/jpeg" data-x="98.13276231263379" data-y="37.299785867237716"
+                                                             data-width="500" data-height="500" data-scale-x="1" data-scale-y="1" data-aspect-ratio="1/1"/>
+                                                        <h3>
+                                                            <span style="font-size: 24px;"><t t-esc="researcher_team.name"/></span>
+                                                        </h3>
+                                                        <p><t t-esc="researcher_team.position_detail"/></p>
+                                                    </div>
+                                                </t>
+                                            </div>
+                                        </div>
+                                      </section>
+                                    </div>
+                                  </div>
+                                  <div class="tab-pane fade active show" id="nav_tabs_content_1656473037572_76" role="tabpanel" aria-labelledby="nav_tabs_link_1656473037572_76">
+                                    <div class="oe_structure oe_empty">
+                                      <section class="s_text_block" style="background-image: none;" data-name="Text">
+                                        <div class="container">
+                                            <div class="row">
+                                                <t t-foreach="engineer_team" t-as="engineer_team">
+                                                    <div class="pb32 text-center o_colored_level col-lg-3 pt0" style="">
+                                                        <img t-att-src="image_data_uri(engineer_team.img)" class="img-fluid  m-3 fa-3x bg-primary o_we_image_cropped mx-auto d-block rounded-circle shadow"
+                                                             alt="" data-original-title="" title="" aria-describedby="tooltip646569" style="width: 100% !important;" loading="lazy"
+                                                             data-mimetype="image/jpeg" data-x="98.13276231263379" data-y="37.299785867237716" data-width="500" data-height="500" data-scale-x="1" data-scale-y="1" data-aspect-ratio="1/1"/>
+                                                        <h3>
+                                                            <span style="font-size: 24px;"><t t-esc="engineer_team.name"/></span>
+                                                        </h3>
+                                                        <p><t t-esc="engineer_team.position_detail"/></p>
+                                                    </div>
+                                                </t>
+                                            </div>
+                                        </div>
+                                      </section>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        </section>
                     </div>
                 </div>
             </t>
